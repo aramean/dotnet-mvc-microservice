@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  gunnebo:
+    image: ${DOCKER_REGISTRY-}gunnebo
+    build:
+      context: .
+      dockerfile: Gunnebo/Dockerfile
+    networks:
+      - gunnebo-net
+    links:
+      - gunnebo-db
+    depends_on:
+      - gunnebo-db
+  gunnebo-db:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    container_name: gunnebo-mssql
+    networks:
+      - gunnebo-net
+networks:
+    gunnebo-net:
+        driver: bridge

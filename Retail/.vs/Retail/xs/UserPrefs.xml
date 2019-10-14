@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{F426A0D9-E9E1-4AE9-9429-E3C809154B3B}|Default">
+  <MonoDevelop.Ide.ItemProperties.Gunnebo PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Gunnebo/Controllers/OrdersController.cs">
+    <Files>
+      <File FileName="Gunnebo/Controllers/OrdersController.cs" Line="52" Column="62" />
+      <File FileName="Gunnebo/Readme.txt" Line="15" Column="9" />
+      <File FileName="Gunnebo/Readme_feature.txt" Line="1" Column="1" />
+      <File FileName="Gunnebo/Enumerations/OrderStatus.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Retail" expanded="True">
+            <Node name="Gunnebo" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="OrdersController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

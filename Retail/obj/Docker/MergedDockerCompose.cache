@@ -1,0 +1,41 @@
+networks:
+  gunnebo-net:
+    driver: bridge
+services:
+  gunnebo:
+    build:
+      context: /Developer/Gunnebo/Retail
+      dockerfile: Gunnebo/Dockerfile
+    depends_on:
+    - gunnebo-db
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTPS_PORT: '44396'
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: gunnebo
+    links:
+    - gunnebo-db
+    networks:
+      gunnebo-net: {}
+    ports:
+    - published: 55861
+      target: 80
+    - published: 44396
+      target: 443
+    volumes:
+    - /Users/josef/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/josef/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+  gunnebo-db:
+    container_name: gunnebo-postgresql
+    environment:
+      POSTGRES_DB: gunnebo
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
+    hostname: gunnebo-dbhost
+    image: postgres:10.4
+    networks:
+      gunnebo-net: {}
+    ports:
+    - published: 15432
+      target: 5432
+version: '3.4'
