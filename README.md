@@ -1,5 +1,5 @@
 # Microservice example with ASP.NET Core 3.0
-This simple project is using Entity Framework Core (EFC), Dependency Injection (DI), Enum, Data annotation, Fluent API & JSON serialization and deserialization.
+This simple retail solution project is using Entity Framework Core (EFC), Dependency Injection (DI), Enum, Data annotation, Fluent API & JSON serialization and deserialization.
 
 ## Architecture
 - [x] Data-driven CRUD microservice
