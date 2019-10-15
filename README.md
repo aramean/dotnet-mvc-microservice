@@ -1,4 +1,4 @@
-# Simple data-driven CRUD microservice example with ASP.NET Core 3.0
+# Simple microservice example with ASP.NET Core 3.0
 This Project is using Entity Framework Core (EFC), Dependency Injection (DI), 
 
 # Architecture
