@@ -9,7 +9,7 @@ This simple project is using Entity Framework Core (EFC), Dependency Injection (
 ## IDE
 *This project have been tested and compiled with:
 
-- [x] Visual Studio
+- [x] Visual Studio Community for Mac
 - [ ] Visual Studio Code
 
 ## API Overview ##
