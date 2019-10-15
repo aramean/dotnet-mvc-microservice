@@ -22,3 +22,6 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 | &#x1f499; **GET**<br> /api/Orders/{RegistrationNumber} | Get an order item by registration number | - | Order item |
 | &#x1F49A; **POST**<br> /api/Orders | Add a new order item | OrderNumber & OrderRegistrationNumber  | Order item |
 | &#x1f49b; **PATCH**<br> /api/Orders/{RegistrationNumber}  | Update an existing order item | OrderRegistrationNumber | Order item |
+
+* Plural Nouns for Endpoints
+* CamelCase for Attribute Names
