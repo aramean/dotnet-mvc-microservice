@@ -1,4 +1,4 @@
-# Simple microservice example with ASP.NET Core 3.0
+# Microservice example with ASP.NET Core 3.0
 This Project is using Entity Framework Core (EFC), Dependency Injection (DI), 
 
 # Architecture
