@@ -6,6 +6,10 @@ This simple project is using Entity Framework Core (EFC), Dependency Injection (
 - [ ] Domain-driven oriented microservice
 - [ ] Clean Domain-driven Design microservice
 
+# IDE
+- [x] Visual Studio
+- [ ] Visual Studio Code
+
 ## API Overview ##
 *This project has the following API:
 
