@@ -18,7 +18,7 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 
 |API|Description|Request body|Response body|
 |-|:-|:-|:-|
-| &#x1f499; **GET**<br> /api/Orders | Get all order items | - | Array of orders items |
+| &#x1f499; **GET**<br> /api/Orders | Get all order items | - | Array of order items |
 | &#x1f499; **GET**<br> /api/Orders/{RegistrationNumber} | Get an order item by registration number | - | Order item |
 | &#x1F49A; **POST**<br> /api/Orders | Add a new order item | OrderNumber & OrderRegistrationNumber  | Order item |
 | &#x1f49b; **PATCH**<br> /api/Orders/{RegistrationNumber}  | Update an existing order item | OrderRegistrationNumber | Order item |
