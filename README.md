@@ -6,8 +6,9 @@ This Project is using Entity Framework Core (EFC), Dependency Injection (DI),
 - [ ] Domain-driven oriented microservice
 - [ ] Clean Domain-driven Design microservice
 
-## API Overview
-This project has the following API:
-| API	| Description	| Request body	| Response body |
-|-|-|-|-|
-| GET /api/Orders | Get all order items |	None | Array of all orders |
+## API Overview ##
+*This project has the following API:
+
+|API|Description|Request body|Response body|
+|-|:-|-|:-|
+| GET /api/Orders | Get all order items | - | Array of all orders |
