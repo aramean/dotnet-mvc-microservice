@@ -1,5 +1,5 @@
 # Microservice example with ASP.NET Core 3.0
-This simple project is using Entity Framework Core (EFC), Dependency Injection (DI), DataAnnotation, Enum, Fluent API & JSON serialization and deserialization.
+This simple project is using Entity Framework Core (EFC), Dependency Injection (DI), Enum, Data annotation, Fluent API & JSON serialization and deserialization.
 
 # Architecture
 - [x] Data-driven CRUD microservice
@@ -11,5 +11,7 @@ This simple project is using Entity Framework Core (EFC), Dependency Injection (
 
 |API|Description|Request body|Response body|
 |-|:-|:-|:-|
-| *GET* /api/Orders | Get all order items | - | Array of all orders |
-| *GET* /api/Orders/{RegistrationNumber} | Get order by registration number | - | Order item |
+| *GET* /api/Orders | Get all order items | - | Array of orders items |
+| *GET* /api/Orders/{RegistrationNumber} | Get an item by registration number | - | Order item |
+| *POST* /api/Orders | Create a new order item | OrderNumber & OrderRegistrationNumber  | Order item |
+| *PATCH* /api/Orders{RegistrationNumber}  | Update an existing order item | OrderRegistrationNumber | Order item |
