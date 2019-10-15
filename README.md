@@ -1,5 +1,5 @@
 # Microservice example with ASP.NET Core 3.0
-This Project is using Entity Framework Core (EFC), Dependency Injection (DI), 
+This simple project is using Entity Framework Core (EFC), Dependency Injection (DI), 
 
 # Architecture
 - [x] Data-driven CRUD microservice
@@ -10,5 +10,6 @@ This Project is using Entity Framework Core (EFC), Dependency Injection (DI),
 *This project has the following API:
 
 |API|Description|Request body|Response body|
-|-|:-|-|:-|
+|-|:-|:-|:-|
 | GET /api/Orders | Get all order items | - | Array of all orders |
+| GET /api/Orders/{RegistrationNumber} | Get order by registration number | - | Order item |
