@@ -18,7 +18,7 @@ This simple project is using Entity Framework Core (EFC), Dependency Injection (
 
 |API|Description|Request body|Response body|
 |-|:-|:-|:-|
-| *GET* /api/Orders | Get all order items | - | Array of orders items |
-| *GET* /api/Orders/{RegistrationNumber} | Get an item by registration number | - | Order item |
-| *POST* /api/Orders | Create a new order item | OrderNumber & OrderRegistrationNumber  | Order item |
-| *PATCH* /api/Orders{RegistrationNumber}  | Update an existing order item | OrderRegistrationNumber | Order item |
+| &#x1f499; **GET**<br> /api/Orders | Get all order items | - | Array of orders items |
+| &#x1f499; **GET**<br> /api/Orders/{RegistrationNumber} | Get an item by registration number | - | Order item |
+| &#x1F49A; **POST**<br> /api/Orders | Create a new order item | OrderNumber & OrderRegistrationNumber  | Order item |
+| &#x1f49b; **PATCH**<br> /api/Orders/{RegistrationNumber}  | Update an existing order item | OrderRegistrationNumber | Order item |
