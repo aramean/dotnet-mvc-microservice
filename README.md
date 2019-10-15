@@ -7,9 +7,9 @@ This simple project is using Entity Framework Core (EFC), Dependency Injection (
 - [ ] Clean Domain-driven Design microservice
 
 ## Environment
+### IDE
 *This project have been tested and compiled with:
 
-### IDE
 - [x] Visual Studio Community for Mac
 - [ ] Visual Studio Code
 
