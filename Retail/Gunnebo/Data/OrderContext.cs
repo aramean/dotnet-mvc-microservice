@@ -1,6 +1,6 @@
 using System;
-using Microsoft.EntityFrameworkCore;
 using Gunnebo.Enumirations;
+using Microsoft.EntityFrameworkCore;
 
 namespace gunnebo.Data
 {

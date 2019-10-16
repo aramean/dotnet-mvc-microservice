@@ -1,7 +1,8 @@
 ﻿using System;
+
 namespace Gunnebo.Enumirations
 {
-    [Flags] // It's here for now! 
+    [Flags]
     public enum OrderStatusEnum
     {
         Idle = 0,
