@@ -89,6 +89,8 @@ namespace gunnebo.Controllers
                 return BadRequest(ModelState);
             }
 
+            value.OrderStatus = Gunnebo.Enumirations.OrderStatusEnum.New;
+
             _context.Orders.Add(value);
             await _context.SaveChangesAsync();
 
