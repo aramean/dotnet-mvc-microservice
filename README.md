@@ -32,16 +32,16 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 ### CLI ###
 *This solution has available make commands:
 
-Install all required packages and tools<br>
+Install all required packages and tools.<br>
 ```make install```
 
 Create SSL Certificate.<br>
 ```make ssl:create```
 
-Run application in CLI.<br>
+Run application.<br>
 ```make run```
 
-Run application in CLI with Watcher.<br>
+Run application with Watcher.<br>
 ```make watch```
 
 Start MSSQL in docker.<br>
