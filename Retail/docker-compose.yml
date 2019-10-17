@@ -1,22 +1,22 @@
 version: '3.4'
 
 services:
-  gunnebo:
-    image: ${DOCKER_REGISTRY-}gunnebo
+  api:
+    image: ${DOCKER_REGISTRY-}api
     build:
       context: .
-      dockerfile: Gunnebo/Dockerfile
+      dockerfile: src/Dockerfile
     networks:
-      - gunnebo-net
+      - retail-orders-net
     links:
-      - gunnebo-db
+      - db
     depends_on:
-      - gunnebo-db
-  gunnebo-db:
+      - db
+  db:
     image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
-    container_name: gunnebo-mssql
+    container_name: retail-orders-mssql
     networks:
-      - gunnebo-net
+      - retail-orders-net
 networks:
-    gunnebo-net:
+    retail-orders-net:
         driver: bridge

@@ -6,7 +6,7 @@
     <ProjectGuid>{AA169FC5-948C-469B-B123-C54A071590FA}</ProjectGuid>
     <DockerLaunchBrowser>false</DockerLaunchBrowser>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/order</DockerServiceUrl>
-    <DockerServiceName>gunnebo</DockerServiceName>
+    <DockerServiceName>retail</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

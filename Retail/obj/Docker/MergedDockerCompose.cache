@@ -1,22 +1,22 @@
 networks:
-  gunnebo-net:
+  retail-orders-net:
     driver: bridge
 services:
-  gunnebo:
+  api:
     build:
-      context: /Developer/Gunnebo/Retail
-      dockerfile: Gunnebo/Dockerfile
+      context: /Users/josef/Projects/dotnet-mvc-microservice/Retail
+      dockerfile: src/Dockerfile
     depends_on:
-    - gunnebo-db
+    - db
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTPS_PORT: '44396'
       ASPNETCORE_URLS: https://+:443;http://+:80
-    image: gunnebo
+    image: api
     links:
-    - gunnebo-db
+    - db
     networks:
-      gunnebo-net: {}
+      retail-orders-net: {}
     ports:
     - published: 55861
       target: 80
@@ -25,17 +25,18 @@ services:
     volumes:
     - /Users/josef/.aspnet/https:/root/.aspnet/https:ro
     - /Users/josef/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
-  gunnebo-db:
-    container_name: gunnebo-postgresql
+  db:
+    container_name: retail-orders-mssql
     environment:
-      POSTGRES_DB: gunnebo
-      POSTGRES_PASSWORD: root
-      POSTGRES_USER: root
-    hostname: gunnebo-dbhost
-    image: postgres:10.4
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      SA_PASSWORD: yourStrong(!)Password
+    hostname: orders-dbhost
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
     networks:
-      gunnebo-net: {}
+      retail-orders-net: {}
     ports:
-    - published: 15432
-      target: 5432
+    - published: 1433
+      target: 1433
+    restart: always
 version: '3.4'

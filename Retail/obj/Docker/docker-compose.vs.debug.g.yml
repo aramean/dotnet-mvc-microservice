@@ -1,19 +1,19 @@
 version: '3.4'
 
 services:
-  gunnebo:
-    image: gunnebo:dev
+  api:
+    image: api:dev
     build:
       target: base
       labels:
         com.microsoft.created-by: "visual-studio"
-        com.microsoft.visual-studio.project-name: "Gunnebo"
+        com.microsoft.visual-studio.project-name: "Orders"
     environment:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
     volumes:
-      - /Developer/Gunnebo/Retail/Gunnebo:/app
-      - /Developer/Gunnebo/Retail:/src
+      - /Users/josef/Projects/dotnet-mvc-microservice/Retail/src:/app
+      - /Users/josef/Projects/dotnet-mvc-microservice/Retail:/src
       - /Users/josef/vsdbg/vs2017u5:/remote_debugger:rw
       - /Users/josef/.nuget/packages/:/root/.nuget/packages:ro
       - /usr/local/share/dotnet/sdk/NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
@@ -21,7 +21,7 @@ services:
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  \"bin/Debug/netcoreapp3.0/Gunnebo.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  \"bin/Debug/netcoreapp3.0/Orders.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
