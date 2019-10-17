@@ -26,3 +26,22 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 
 * Plural Nouns for Endpoints
 * CamelCase for Attribute Names
+
+## Available CLI-Commands ##
+Install all required packages and tools<br>
+```make install```
+
+Create SSL Certificate.<br>
+```make ssl:create```
+
+Run application in CLI.<br>
+```make run```
+
+Run application in CLI with Watcher.<br>
+```make watch```
+
+Start MSSQL in docker.<br>
+```make mssql:start```
+
+Rebuild MSSQL database.<br>
+```make ef:rebuild```
