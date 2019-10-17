@@ -1,5 +1,5 @@
 using System;
-using Gunnebo.Enumirations;
+using Gunnebo.Enumerations;
 using Microsoft.EntityFrameworkCore;
 
 namespace gunnebo.Data

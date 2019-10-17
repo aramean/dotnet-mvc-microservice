@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace Gunnebo.Enumirations
+namespace Gunnebo.Enumerations
+
 {
     [Flags]
     public enum OrderStatusEnum
