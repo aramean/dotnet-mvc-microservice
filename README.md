@@ -6,15 +6,10 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 - [ ] Domain-driven oriented microservice
 - [ ] Clean Domain-driven Design microservice
 
-## Environment
-### IDE
-*This project have been tested and compiled with:
+## SaaS ##
 
-- [x] Visual Studio Community for Mac
-- [ ] Visual Studio Code
-
-## API Overview ##
-*This project has the following API:
+### API Overview ###
+*This service has the following API:
 
 |API|Description|Request body|Response body|
 |-|:-|:-|:-|
@@ -26,6 +21,13 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 
 * Plural Nouns for Endpoints
 * CamelCase for Attribute Names
+
+## Environment
+### IDE
+*This project have been tested and compiled with:
+
+- [x] Visual Studio Community for Mac
+- [ ] Visual Studio Code
 
 ## Available CLI-Commands ##
 Install all required packages and tools<br>
