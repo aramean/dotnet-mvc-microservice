@@ -1,15 +1,22 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{F426A0D9-E9E1-4AE9-9429-E3C809154B3B}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Startup.cs">
+    <Files>
+      <File FileName="src/Startup.cs" Line="44" Column="14" />
+      <File FileName="src/Program.cs" Line="8" Column="18" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Retail" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="Orders" expanded="True" selected="True" />
+              <Node name="Orders" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
+                <Node name="Startup.cs" selected="True" />
+              </Node>
             </Node>
-            <Node name="docker-compose" expanded="True">
-              <Node name="docker-compose.yml" expanded="True" />
-            </Node>
+            <Node name="docker-compose" expanded="True" />
           </Node>
         </State>
       </Pad>
