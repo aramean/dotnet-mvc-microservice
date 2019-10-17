@@ -24,12 +24,14 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 
 ## Environment ##
 ### IDE ###
-*This project have been tested and compiled with:
+*This solution have been tested and compiled with:
 
 - [x] Visual Studio Community for Mac
 - [ ] Visual Studio Code
 
 ### CLI ###
+*This solution has available make commands:
+
 Install all required packages and tools<br>
 ```make install```
 
