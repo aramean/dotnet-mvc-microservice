@@ -68,7 +68,7 @@ namespace gunnebo.Controllers
 
         // PATCH api/orders/1
         [HttpPatch("{OrderRegistrationNumber}")]
-        public async Task<ActionResult<Order>> Patch(long OrderRegistrationNumber, Order order)
+        public async Task<ActionResult<Order>> Patch(Order order)
         {
             var orderToUpdate = await _context.Orders.FirstOrDefaultAsync(o => o.OrderRegistrationNumber == order.OrderRegistrationNumber);
 
@@ -78,7 +78,6 @@ namespace gunnebo.Controllers
             }
 
             orderToUpdate.OrderStatus = Gunnebo.Enumerations.OrderStatusEnum.Arrived;
-            //_context.Entry(orderToUpdate).State = EntityState.Modified;
             _context.Entry(orderToUpdate).Property("OrderStatus").IsModified = true;
             await _context.SaveChangesAsync();
 
