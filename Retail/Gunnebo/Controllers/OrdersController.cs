@@ -71,6 +71,12 @@ namespace gunnebo.Controllers
         public async Task<ActionResult<Order>> Patch(long OrderRegistrationNumber, Order order)
         {
             var orderToUpdate = await _context.Orders.FirstOrDefaultAsync(o => o.OrderRegistrationNumber == order.OrderRegistrationNumber);
+
+            if (orderToUpdate == null)
+            {
+                return NotFound();
+            }
+
             orderToUpdate.OrderStatus = Gunnebo.Enumerations.OrderStatusEnum.Arrived;
             //_context.Entry(orderToUpdate).State = EntityState.Modified;
             _context.Entry(orderToUpdate).Property("OrderStatus").IsModified = true;
