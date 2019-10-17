@@ -5,8 +5,8 @@ namespace Gunnebo.Enumirations
     [Flags]
     public enum OrderStatusEnum
     {
-        Idle = 0,
-        New = 1,
-        Arrived = 2
+        Idle = 1,
+        New = 2,
+        Arrived = 3
     }
 }
