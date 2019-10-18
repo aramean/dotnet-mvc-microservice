@@ -28,10 +28,10 @@ namespace Orders.Controllers
         }
 
         // GET api/orders/1
-        [HttpGet("{OrderRegistrationNumber}")]
-        public async Task<ActionResult<Order>> Get(long OrderRegistrationNumber)
+        [HttpGet("{orderRegistrationNumber}")]
+        public async Task<ActionResult<Order>> Get(long orderRegistrationNumber)
         {
-            var order = await _context.Orders.SingleOrDefaultAsync(o => o.OrderRegistrationNumber == OrderRegistrationNumber);
+            var order = await _context.Orders.SingleOrDefaultAsync(o => o.OrderRegistrationNumber == orderRegistrationNumber);
 
             if (order == null)
             {
@@ -42,15 +42,15 @@ namespace Orders.Controllers
         }
 
         // PUT api/orders/1
-        [HttpPut("{OrderRegistrationNumber}")]
-        public async Task<ActionResult<Order>> Put(long OrderRegistrationNumber, Order order)
+        [HttpPut("{orderRegistrationNumber}")]
+        public async Task<ActionResult<Order>> Put(long orderRegistrationNumber, Order order)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (OrderRegistrationNumber != order.OrderRegistrationNumber)
+            if (orderRegistrationNumber != order.OrderRegistrationNumber)
             {
                 return BadRequest();
             }
@@ -62,7 +62,7 @@ namespace Orders.Controllers
         }
 
         // PATCH api/orders/1
-        [HttpPatch("{OrderRegistrationNumber}")]
+        [HttpPatch("{orderRegistrationNumber}")]
         public async Task<ActionResult<Order>> Patch(Order order)
         {
             var orderToUpdate = await _context.Orders.FirstOrDefaultAsync(o => o.OrderRegistrationNumber == order.OrderRegistrationNumber);
