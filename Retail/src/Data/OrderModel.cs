@@ -1,9 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Gunnebo.Enumerations;
+using Orders.Enumerations;
 
-namespace gunnebo.Data
+namespace Orders.Data
 {
     public class Order
     {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using gunnebo.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Orders.Data;
 
 namespace gunnebo.Controllers
 {
@@ -77,7 +77,7 @@ namespace gunnebo.Controllers
                 return NotFound();
             }
 
-            orderToUpdate.OrderStatus = Gunnebo.Enumerations.OrderStatusEnum.Arrived;
+            orderToUpdate.OrderStatus = Orders.Enumerations.OrderStatusEnum.Arrived;
             _context.Entry(orderToUpdate).Property("OrderStatus").IsModified = true;
             await _context.SaveChangesAsync();
 
@@ -93,7 +93,7 @@ namespace gunnebo.Controllers
                 return BadRequest(ModelState);
             }
 
-            value.OrderStatus = Gunnebo.Enumerations.OrderStatusEnum.New;
+            value.OrderStatus = Orders.Enumerations.OrderStatusEnum.New;
 
             _context.Orders.Add(value);
             await _context.SaveChangesAsync();

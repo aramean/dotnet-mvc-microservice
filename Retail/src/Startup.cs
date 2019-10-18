@@ -1,13 +1,13 @@
 using System.Text.Json.Serialization;
-using gunnebo.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Orders.Data;
 
-namespace Gunnebo
+namespace Orders
 {
     public class Startup
     {

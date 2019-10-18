@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace gunnebo.Data
+namespace Orders.Data
 {
     public static class OrderSeed
     {

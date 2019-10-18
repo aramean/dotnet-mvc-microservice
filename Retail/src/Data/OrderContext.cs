@@ -1,8 +1,8 @@
 using System;
-using Gunnebo.Enumerations;
+using Orders.Enumerations;
 using Microsoft.EntityFrameworkCore;
 
-namespace gunnebo.Data
+namespace Orders.Data
 {
     public class OrderContext : DbContext
     {
