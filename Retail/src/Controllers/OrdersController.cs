@@ -31,11 +31,6 @@ namespace Orders.Controllers
         [HttpGet("{OrderRegistrationNumber}")]
         public async Task<ActionResult<Order>> Get(long OrderRegistrationNumber)
         {
-            // INFO: No indexed Unique combined key supported in EF, See Order DbContext.
-            // TODO: Add unique constraint to combination of two columns.
-
-            //var order = await _context.Orders.FirstAsync(o => o.OrderRegistrationNumber == OrderRegistrationNumber);
-            //var order = await _context.Orders.FindAsync(OrderRegistrationNumber); // Primary key is not used in solution
             var order = await _context.Orders.SingleOrDefaultAsync(o => o.OrderRegistrationNumber == OrderRegistrationNumber);
 
             if (order == null)
@@ -98,7 +93,6 @@ namespace Orders.Controllers
             _context.Orders.Add(value);
             await _context.SaveChangesAsync();
 
-            // TODO: Optimize with just one element (Get) if possible.
             return CreatedAtAction("GetAll", new { Id = value.OrderId }, value); // Trigger GetAll method
         }
 
