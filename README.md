@@ -14,10 +14,10 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 |API|Description|Request body|Response body|
 |-|:-|:-|:-|
 | &#x1f499; **GET**<br> /api/Orders | Get all order items | - | Array of order items |
-| &#x1f499; **GET**<br> /api/Orders/{RegistrationNumber} | Get an order item by registration number | - | Order item |
-| &#x1F49A; **POST**<br> /api/Orders | Add a new order item | OrderNumber & OrderRegistrationNumber  | Order item |
-| &#x1f49b; **PATCH**<br> /api/Orders/{RegistrationNumber}  | Update an existing order item | OrderRegistrationNumber | Order item |
-| &#x1f494; **DELETE** (TODO)<br> /api/Orders/{RegistrationNumber}  | Delete an existing order item | OrderRegistrationNumber | - |
+| &#x1f499; **GET**<br> /api/Orders/{registrationNumber} | Get an order item by registration number | - | Order item |
+| &#x1F49A; **POST**<br> /api/Orders | Add a new order item | orderNumber & orderRegistrationNumber  | Order item |
+| &#x1f49b; **PATCH**<br> /api/Orders/{registrationNumber}  | Update an existing order item | orderRegistrationNumber | Order item |
+| &#x1f494; **DELETE** (TODO)<br> /api/Orders/{registrationNumber}  | Delete an existing order item | orderRegistrationNumber | - |
 
 * Plural Nouns for Endpoints
 * CamelCase for Attribute Names
