@@ -88,6 +88,13 @@ namespace Orders.Controllers
                 return BadRequest(ModelState);
             }
 
+            var checkOrderNumberExists = await _context.Orders.FirstOrDefaultAsync(o => o.OrderNumber == value.OrderNumber);
+
+            if (checkOrderNumberExists != null)
+            {
+                return Conflict();
+            }
+
             value.OrderStatus = Orders.Enumerations.OrderStatusEnum.New;
 
             _context.Orders.Add(value);
