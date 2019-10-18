@@ -33,4 +33,4 @@ ssl%create:
 	dotnet dev-certs https --trust
 
 mssql%start:
-	docker-compose run db
+	docker-compose run -d db
