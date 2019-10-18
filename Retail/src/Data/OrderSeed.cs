@@ -19,14 +19,12 @@ namespace gunnebo.Data
                 new Order
                 {
                     OrderNumber = 1,
-                    OrderRegistrationNumber = 0,
-                    //OrderStatus = 0
+                    OrderRegistrationNumber = 0
                 },
                 new Order
                 {
                     OrderNumber = 2,
-                    OrderRegistrationNumber = 1,
-                    //OrderStatus = "Test"
+                    OrderRegistrationNumber = 1
                 }
             );
 
