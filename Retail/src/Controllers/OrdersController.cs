@@ -73,6 +73,7 @@ namespace Orders.Controllers
             }
 
             orderToUpdate.OrderStatus = Orders.Enumerations.OrderStatusEnum.Arrived;
+
             _context.Entry(orderToUpdate).Property("OrderStatus").IsModified = true;
             await _context.SaveChangesAsync();
 
