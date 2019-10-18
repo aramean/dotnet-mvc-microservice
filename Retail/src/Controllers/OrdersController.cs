@@ -43,7 +43,7 @@ namespace Orders.Controllers
                 return NotFound();
             }
 
-            return order;
+            return Ok(order);
         }
 
         // PUT api/orders/1
