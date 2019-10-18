@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Orders.Data;
 
-namespace gunnebo.Controllers
+namespace Orders.Controllers
 {
     [ApiController]
     [Route("/api/[controller]")]

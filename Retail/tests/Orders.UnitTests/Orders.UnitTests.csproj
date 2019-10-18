@@ -123,6 +123,6 @@
     <None Remove="Orders.IntegrationTests\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Orders.csproj" />
+    <ProjectReference Include="..\..\src\Orders.csproj" />
   </ItemGroup>
 </Project>
