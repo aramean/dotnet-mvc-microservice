@@ -10,7 +10,7 @@ using Orders.Data;
 namespace Orders.Migrations
 {
     [DbContext(typeof(OrderContext))]
-    [Migration("20191018065611_InitialCreate")]
+    [Migration("20191018110121_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace Orders.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("gunnebo.Data.Order", b =>
+            modelBuilder.Entity("Orders.Data.Order", b =>
                 {
                     b.Property<long>("OrderId")
                         .ValueGeneratedOnAdd()
