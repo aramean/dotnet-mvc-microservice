@@ -10,7 +10,7 @@ namespace Orders.Data
 
         public DbSet<Order> Orders { get; set; } // EF Creates table in DB
 
-        // DONE: EF not supporting annotation Index, using Fluent API, See: https://docs.microsoft.com/en-us/ef/core/modeling/relational/indexes
+        // Fluent API, See: https://docs.microsoft.com/en-us/ef/core/modeling/relational/indexes
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
