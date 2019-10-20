@@ -72,7 +72,7 @@ namespace Orders.Controllers
                 return NotFound();
             }
 
-            orderToUpdate.OrderStatus = Orders.Enumerations.OrderStatusEnum.Arrived;
+            orderToUpdate.OrderStatus = Enumerations.OrderStatusEnum.Arrived;
 
             _context.Entry(orderToUpdate).Property("OrderStatus").IsModified = true;
             await _context.SaveChangesAsync();
@@ -96,7 +96,7 @@ namespace Orders.Controllers
                 return Conflict();
             }
 
-            value.OrderStatus = Orders.Enumerations.OrderStatusEnum.New;
+            value.OrderStatus = Enumerations.OrderStatusEnum.New;
 
             _context.Orders.Add(value);
             await _context.SaveChangesAsync();
