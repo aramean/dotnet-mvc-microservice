@@ -1,22 +1,26 @@
-version: '3.4'
+version: '3.5'
 
 services:
   api:
     image: ${DOCKER_REGISTRY-}api
+    container_name: retailOrders_API
     build:
       context: .
       dockerfile: src/Dockerfile
-    networks:
-      - retail-orders-net
     links:
       - db
     depends_on:
       - db
+    networks:
+      - retailOrdersNet
+
   db:
     image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
-    container_name: retail-orders-mssql
+    container_name: retailOrders_MSSQL
     networks:
-      - retail-orders-net
+      - retailOrdersNet
+
 networks:
-    retail-orders-net:
-        driver: bridge
+    retailOrdersNet:
+      driver: bridge
+      name: retailOrdersNet

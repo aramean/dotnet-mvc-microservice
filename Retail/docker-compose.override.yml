@@ -1,23 +1,25 @@
-version: '3.4'
+version: '3.5'
 
 services:
   api:
+    hostname: ordersApiHost
+    ports:
+      - "55861:80"
+      - "44396:443"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - ASPNETCORE_HTTPS_PORT=44396
-    ports:
-      - "55861:80"
-      - "44396:443"
+      - ConnectionString=Server=192.168.32.2,1433;Database=Orders;User=sa;Password=yourStrong(!)Password;Trusted_Connection=False;MultipleActiveResultSets=true
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
   db:
+    hostname: ordersMssqlHost
     ports:
       - "1433:1433"
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=yourStrong(!)Password
       - MSSQL_PID=Developer
-    hostname: orders-dbhost
     restart: always
