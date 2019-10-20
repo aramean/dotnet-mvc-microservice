@@ -17,6 +17,7 @@ namespace Orders.IntegrationTests
             var AppFactory = new WebApplicationFactory<Startup>()
                 .WithWebHostBuilder(builder =>
                 {
+                    builder.UseSetting("https_port", "443");
                     builder.ConfigureServices(services =>
                     {
                         services.RemoveAll(typeof(OrderContext));
