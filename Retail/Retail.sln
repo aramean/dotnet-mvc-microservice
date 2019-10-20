@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.UnitTests", "tests\O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.IntegrationTests", "tests\Orders.IntegrationTests\Orders.IntegrationTests.csproj", "{E50552B9-D4E6-4C83-971B-4C64E0EB8696}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.FunctionalTests", "tests\Orders.FunctionalTests\Orders.FunctionalTests.csproj", "{CF501E96-D7ED-4EEB-AE2D-FF3C2AFA267B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{E50552B9-D4E6-4C83-971B-4C64E0EB8696}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E50552B9-D4E6-4C83-971B-4C64E0EB8696}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E50552B9-D4E6-4C83-971B-4C64E0EB8696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF501E96-D7ED-4EEB-AE2D-FF3C2AFA267B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF501E96-D7ED-4EEB-AE2D-FF3C2AFA267B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF501E96-D7ED-4EEB-AE2D-FF3C2AFA267B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF501E96-D7ED-4EEB-AE2D-FF3C2AFA267B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
@@ -75,5 +81,6 @@ Global
 		{F426A0D9-E9E1-4AE9-9429-E3C809154B3B} = {5B0268A6-BB4C-4B30-BFE1-838BDBD9F56D}
 		{2C671ABB-747A-4497-A18E-6FAB913E9E7B} = {E996EB3F-00BD-473E-80B4-6482325109CE}
 		{E50552B9-D4E6-4C83-971B-4C64E0EB8696} = {E996EB3F-00BD-473E-80B4-6482325109CE}
+		{CF501E96-D7ED-4EEB-AE2D-FF3C2AFA267B} = {E996EB3F-00BD-473E-80B4-6482325109CE}
 	EndGlobalSection
 EndGlobal
