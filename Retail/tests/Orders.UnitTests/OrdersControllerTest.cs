@@ -4,7 +4,7 @@ using Moq;
 
 namespace Orders.UnitTests
 {
-    public class OrdersController
+    public class OrdersControllerTest
     {
         [Fact]
         public void Test1()
