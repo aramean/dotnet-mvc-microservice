@@ -10,7 +10,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - ASPNETCORE_HTTPS_PORT=44396
-      - ConnectionString=Server=192.168.32.2,1433;Database=Orders;User=sa;Password=yourStrong(!)Password;Trusted_Connection=False;MultipleActiveResultSets=true
+      - ConnectionString=Server=db,1433;Database=Orders;User=sa;Password=Pass@word;Trusted_Connection=False;MultipleActiveResultSets=true
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
@@ -20,6 +20,6 @@ services:
       - "1433:1433"
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=yourStrong(!)Password
+      - SA_PASSWORD=Pass@word
       - MSSQL_PID=Developer
     restart: always
