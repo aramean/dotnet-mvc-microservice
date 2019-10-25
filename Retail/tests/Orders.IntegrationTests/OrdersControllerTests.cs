@@ -15,16 +15,15 @@ namespace Orders.IntegrationTests
     public class OrdersControllerTest : IntegrationTest
     {
 
-        [Theory]
-        [InlineData("api/orders/")]
-        public async Task GetAll_ShouldBeOKAndCorrectContentType(string url)
+        [Fact]
+        public async Task GetAll_ShouldBeOKAndCorrectContentType()
         {
 
             // Arange
             //await AuthenticateAsync();
 
             // Act
-            var response = await TestClient.GetAsync(url);
+            var response = await TestClient.GetAsync("api/orders/");
 
             // Assert
             response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -32,7 +31,9 @@ namespace Orders.IntegrationTests
         }
 
         [Theory]
-        [InlineData("api/orders/0")]
+        [InlineData("api/orders/1")]
+        [InlineData("api/orders/2")]
+        [InlineData("api/orders/3")]
         public async Task Get_ShouldBeOKAndCorrectContentType(string url)
         {
 

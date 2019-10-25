@@ -16,16 +16,9 @@ namespace Orders.Data
             }
 
             context.Orders.AddRange(
-                new Order
-                {
-                    OrderNumber = 1,
-                    OrderRegistrationNumber = 0
-                },
-                new Order
-                {
-                    OrderNumber = 2,
-                    OrderRegistrationNumber = 1
-                }
+                new Order { OrderNumber = 1, OrderRegistrationNumber = 1, OrderStatus = 0 },
+                new Order { OrderNumber = 2, OrderRegistrationNumber = 2, OrderStatus = 0 },
+                new Order { OrderNumber = 3, OrderRegistrationNumber = 3, OrderStatus = 0 }
             );
 
             context.SaveChanges();
