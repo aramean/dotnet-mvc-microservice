@@ -31,7 +31,7 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 *This solution have been tested and compiled with:
 
 - [x] Visual Studio Community for Mac
-- [ ] Visual Studio Code
+- [x] Visual Studio Code
 
 ### CLI ###
 *This solution has available make commands:
