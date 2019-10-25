@@ -49,13 +49,13 @@ namespace Orders.IntegrationTests
         }
 
         [Theory]
-        [InlineData("api/orders/0")]
+        [InlineData("api/orders/1")]
         public async Task Put_ShouldBeOKAndCorrectContentType(string url)
         {
 
             // Arange
             //await AuthenticateAsync();
-            var payload = "{\"OrderId\": 0, \"OrderNumber\": 0, \"OrderRegistrationNumber\": 0}";
+            var payload = "{\"OrderId\": 1, \"OrderNumber\": 1, \"OrderRegistrationNumber\": 1}";
             var content = new StringContent(payload, Encoding.UTF8, "application/json");
 
             // Act
@@ -73,7 +73,8 @@ namespace Orders.IntegrationTests
 
             // Arange
             //await AuthenticateAsync();
-            var payload = "{\"OrderNumber\": 1, \"OrderRegistrationNumber\": 1}";
+            var uniqueId = DateTime.Now.ToString("MMddmmssff");
+            var payload = "{\"OrderNumber\": " + uniqueId + ", \"OrderRegistrationNumber\": " + uniqueId + "}";
             var content = new StringContent(payload, Encoding.UTF8, "application/json");
 
             // Act
@@ -88,13 +89,15 @@ namespace Orders.IntegrationTests
 
 
         [Theory]
-        [InlineData("api/orders/")]
-        public async Task Post_ShouldBeConflictAndCorrectContentType(string url)
+        [InlineData("api/orders/", 1, 1)]
+        [InlineData("api/orders/", 2, 2)]
+        [InlineData("api/orders/", 3, 3)]
+        public async Task Post_ShouldBeConflictAndCorrectContentType(string url, long key1, long key2)
         {
 
             // Arange
             //await AuthenticateAsync();
-            var payload = "{\"OrderNumber\": 0, \"OrderRegistrationNumber\": 0}";
+            var payload = "{\"OrderNumber\": " + key1 + ", \"OrderRegistrationNumber\": " + key2 + "}";
             var content = new StringContent(payload, Encoding.UTF8, "application/json");
 
             // Act
