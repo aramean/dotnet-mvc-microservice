@@ -1,14 +1,10 @@
 ﻿using System;
-using Xunit;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.Testing;
-using System.IO;
 using System.Net;
 using System.Net.Http;
-using FluentAssertions;
-using FluentAssertions.Extensions;
-using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using FluentAssertions;
+using Xunit;
 
 namespace Orders.IntegrationTests
 {
