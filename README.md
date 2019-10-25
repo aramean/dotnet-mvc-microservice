@@ -53,3 +53,6 @@ Start MSSQL in docker.<br>
 
 Rebuild MSSQL database.<br>
 ```make ef:rebuild```
+
+Reset Visual Studio.<br>
+```make ide:reset```
