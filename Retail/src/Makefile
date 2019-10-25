@@ -34,3 +34,6 @@ ssl%create:
 
 mssql%start:
 	docker-compose run -d db
+
+ide%reset:
+	rm -fr ~/Library/Preferences/VisualStudio
