@@ -1,12 +1,16 @@
 # Microservice example with ASP.NET Core 3.0 #
 This simple retail solution project is using Entity Framework Core (EFC), Dependency Injection (DI), Enum, Data annotation, Fluent API & JSON serialization and deserialization.
 
-## Architecture ##
+## SaaS ##
+
+### Architecture ###
 - [x] Data-driven CRUD microservice
 - [ ] Domain-driven oriented microservice
 - [ ] Clean Domain-driven Design microservice
 
-## SaaS ##
+### Database ###
+- [x] MSSQL
+- [x] InMemory
 
 ### API Overview ###
 *This service has the following API:
@@ -27,7 +31,7 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 *This solution have been tested and compiled with:
 
 - [x] Visual Studio Community for Mac
-- [ ] Visual Studio Code
+- [x] Visual Studio Code
 
 ### CLI ###
 *This solution has available make commands:
@@ -49,3 +53,6 @@ Start MSSQL in docker.<br>
 
 Rebuild MSSQL database.<br>
 ```make ef:rebuild```
+
+Reset Visual Studio.<br>
+```make ide:reset```
