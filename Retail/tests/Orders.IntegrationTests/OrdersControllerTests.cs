@@ -49,13 +49,16 @@ namespace Orders.IntegrationTests
         }
 
         [Theory]
-        [InlineData("api/orders/1")]
-        public async Task Put_ShouldBeOKAndCorrectContentType(string url)
+        [InlineData("api/orders/1", 1)]
+        [InlineData("api/orders/2", 2)]
+        [InlineData("api/orders/3", 3)]
+        public async Task Put_ShouldBeOK(string url, long key1)
         {
 
             // Arange
             //await AuthenticateAsync();
-            var payload = "{\"OrderId\": 1, \"OrderNumber\": 1, \"OrderRegistrationNumber\": 1}";
+            var keyDate = DateTime.Now.ToString("MMddmmssff");
+            var payload = "{\"OrderNumber\": " + key1 + ", \"OrderRegistrationNumber\": " + key1 + ", \"OrderDate\": " + keyDate + "}";
             var content = new StringContent(payload, Encoding.UTF8, "application/json");
 
             // Act
@@ -63,7 +66,46 @@ namespace Orders.IntegrationTests
 
             // Assert
             response.StatusCode.Should().Be(HttpStatusCode.OK);
-            response.Content.Headers.ContentType.ToString().Should().Be("application/json; charset=utf-8");
+        }
+
+        [Theory]
+        [InlineData("api/orders/1", 111)]
+        [InlineData("api/orders/2", 222)]
+        [InlineData("api/orders/3", 333)]
+        public async Task Put_ShouldBeBadRequest(string url, long key1)
+        {
+
+            // Arange
+            //await AuthenticateAsync();
+            var keyDate = DateTime.Now.ToString("MMddmmssff");
+            var payload = "{\"OrderNumber\": " + key1 + ", \"OrderRegistrationNumber\": " + key1 + ", \"OrderDate\": " + keyDate + "}";
+            var content = new StringContent(payload, Encoding.UTF8, "application/json");
+
+            // Act
+            var response = await TestClient.PutAsync(url, content);
+
+            // Assert
+            response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        }
+
+        [Theory]
+        [InlineData("api/orders/1", 1)]
+        [InlineData("api/orders/2", 2)]
+        [InlineData("api/orders/3", 3)]
+        public async Task Patch_ShouldBeOKWithRespondArrivedAndCorrectContentType(string url, long key1)
+        {
+            // Arange
+            //await AuthenticateAsync();
+            var payload = "{\"OrderRegistrationNumber\": " + key1 + "}";
+            var content = new StringContent(payload, Encoding.UTF8, "application/json");
+
+            // Act
+            var response = await TestClient.PatchAsync(url, content);
+            var contents = await response.Content.ReadAsStringAsync();
+
+            // Assert
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+            contents.Should().Contain("\"orderStatus\":\"Arrived\"");
         }
 
         [Theory]
