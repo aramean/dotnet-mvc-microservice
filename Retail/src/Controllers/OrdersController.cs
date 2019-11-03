@@ -26,7 +26,7 @@ namespace Orders.Controllers
 
         // GET api/orders
         [HttpGet]
-        public async Task<IEnumerable<Order>> GetAll()
+        public async Task<IEnumerable<Order>> GetAllFull()
         {
             var posts = await _repository.FindAll<Order>();
             return posts;
@@ -35,7 +35,7 @@ namespace Orders.Controllers
         // GET: api/orders/0/5
         [Route("{page:int}/{pageSize:int}")]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Order>>> GetPost(int page = 0, int pageSize = 5)
+        public async Task<ActionResult<IEnumerable<Order>>> GetAll(int page = 0, int pageSize = 5)
         {
             var posts = await _context.Orders.Skip(page * pageSize).Take(pageSize).ToListAsync();
             return posts;
