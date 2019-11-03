@@ -24,6 +24,7 @@ namespace Orders
             services.AddDbContext<OrderContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
             //services.AddDbContext<OrderContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             //services.AddDbContext<OrderContext>(opt => opt.UseInMemoryDatabase("OrderList"));
+            services.AddScoped<IRepository, Repository<OrderContext>>();
 
             // Convert to enums, Important for API 
             services.AddMvc()

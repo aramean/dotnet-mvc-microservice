@@ -13,13 +13,15 @@ namespace Orders.Controllers
     [Route("/api/[controller]")]
     public class OrdersController : ControllerBase
     {
-        private readonly ILogger<OrdersController> _logger;
-        private readonly OrderContext _context;
+        protected readonly ILogger<OrdersController> _logger;
+        protected readonly OrderContext _context;
+        protected readonly IRepository _repository;
 
-        public OrdersController(OrderContext context, ILogger<OrdersController> logger)
+        public OrdersController(OrderContext context, ILogger<OrdersController> logger, IRepository repository)
         {
             _context = context;
             _logger = logger;
+            _repository = repository;
         }
 
         // GET api/orders
@@ -27,6 +29,16 @@ namespace Orders.Controllers
         public async Task<IEnumerable<Order>> GetAll()
         {
             return await _context.Orders.ToListAsync();
+        }
+
+        // GET: api/orders/0/5
+        [Route("{page:int}/{pageSize:int}")]
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Order>>> GetPost(int page = 0, int pageSize = 5)
+        {
+            //var posts = await _repository.FindAll<Order>();
+            var posts = await _context.Orders.Skip(page * pageSize).Take(pageSize).ToListAsync();
+            return posts;
         }
 
         // GET api/orders/1

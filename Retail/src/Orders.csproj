@@ -13,6 +13,7 @@
     <Folder Include="Data\" />
     <Folder Include="Migrations\" />
     <Folder Include="Enumerations\" />
+    <Folder Include="Data\Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>

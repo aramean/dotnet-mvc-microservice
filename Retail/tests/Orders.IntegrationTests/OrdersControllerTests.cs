@@ -30,6 +30,21 @@ namespace Orders.IntegrationTests
             response.Content.Headers.ContentType.ToString().Should().Be("application/json; charset=utf-8");
         }
 
+        [Fact]
+        public async Task GetAllWithPaginator_ShouldBeOKAndCorrectContentType()
+        {
+
+            // Arange
+            //await AuthenticateAsync();
+
+            // Act
+            var response = await TestClient.GetAsync("api/orders/0/1");
+
+            // Assert
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+            response.Content.Headers.ContentType.ToString().Should().Be("application/json; charset=utf-8");
+        }
+
         [Theory]
         [InlineData("api/orders/1")]
         [InlineData("api/orders/2")]
