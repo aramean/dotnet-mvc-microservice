@@ -28,7 +28,8 @@ namespace Orders.Controllers
         [HttpGet]
         public async Task<IEnumerable<Order>> GetAll()
         {
-            return await _context.Orders.ToListAsync();
+            var posts = await _repository.FindAll<Order>();
+            return posts;
         }
 
         // GET: api/orders/0/5
@@ -36,7 +37,6 @@ namespace Orders.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetPost(int page = 0, int pageSize = 5)
         {
-            //var posts = await _repository.FindAll<Order>();
             var posts = await _context.Orders.Skip(page * pageSize).Take(pageSize).ToListAsync();
             return posts;
         }
