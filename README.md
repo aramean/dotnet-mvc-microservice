@@ -12,6 +12,10 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 - [x] MSSQL
 - [x] InMemory
 
+## Testing ###
+- [x] Integration
+- [ ] Unit
+
 ### API Overview ###
 *This service has the following API:
 
