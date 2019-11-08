@@ -12,7 +12,7 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 - [x] MSSQL
 - [x] InMemory
 
-## Testing ###
+### Testing ###
 - [x] Integration
 - [ ] Unit
 
