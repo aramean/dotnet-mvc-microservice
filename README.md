@@ -3,8 +3,10 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 
 ## Application ##
 
-### Architecture ###
+### Paradigm ###
 - [x] Data-driven CRUD microservice
+
+### Architecture ###
 - [ ] Domain-driven oriented microservice
 - [ ] Clean Domain-driven Design microservice
 
