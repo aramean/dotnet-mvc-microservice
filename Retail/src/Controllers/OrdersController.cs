@@ -96,7 +96,6 @@ namespace Orders.Controllers
             try
             {
                 await _context.SaveChangesAsync();
-
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -104,11 +103,11 @@ namespace Orders.Controllers
 
                 if (entity == null)
                 {
-                    Console.WriteLine("The entity being updated is already deleted by another user...");
+                    _logger.LogError("The entity being updated is already deleted by another user.");
                 }
                 else
                 {
-                    Console.WriteLine("The entity being updated has already been updated by another user...");
+                    _logger.LogError("The entity being updated has already been updated by another user.");
                 }
 
             }
