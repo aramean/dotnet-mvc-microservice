@@ -45,14 +45,14 @@ namespace Orders.Controllers
         [HttpGet("{orderRegistrationNumber}")]
         public async Task<ActionResult<Order>> Get(long orderRegistrationNumber)
         {
-            var order = await _context.Orders.SingleOrDefaultAsync(o => o.OrderRegistrationNumber == orderRegistrationNumber);
-
-            if (order == null)
+            var post = await _repository.FindById<Order>(orderRegistrationNumber);
+            
+            if (post == null)
             {
                 return NotFound();
             }
 
-            return Ok(order);
+            return Ok(post);
         }
 
         // PUT api/orders/1
