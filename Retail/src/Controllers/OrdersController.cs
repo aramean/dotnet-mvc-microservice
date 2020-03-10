@@ -165,5 +165,20 @@ namespace Orders.Controllers
             return CreatedAtAction("GetAll", new { Id = value.OrderId }, value); // Trigger GetAll method
         }
 
+        // DELETE api/orders/1
+        [HttpDelete("{orderRegistrationNumber}")]
+        public async Task<ActionResult<Order>> Delete(long orderRegistrationNumber)
+        {
+            var post = await _repository.FindById<Order>(orderRegistrationNumber);
+
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            await _repository.DeleteAsync<Order>(post);
+
+            return post;
+        }
     }
 }
