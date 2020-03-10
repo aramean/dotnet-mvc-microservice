@@ -27,6 +27,8 @@ namespace Orders
             //services.AddDbContext<OrderContext>(opt => opt.UseInMemoryDatabase("OrderList"));
             services.AddScoped<IRepository, Repository<OrderContext>>();
 
+            services.AddRouting(options => options.LowercaseUrls = true);
+
             // Convert to enums, Important for API 
             services.AddMvc()
                 .AddJsonOptions(options =>
