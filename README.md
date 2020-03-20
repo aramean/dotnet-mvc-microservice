@@ -6,9 +6,12 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 ### Paradigm ###
 - [x] Data-driven CRUD microservice
 
-### Architecture ###
+### Software architecture ###
 - [ ] Domain-driven oriented microservice
 - [ ] Clean Domain-driven Design microservice
+
+### Design principle ###
+- [x] SOLID
 
 ### Database ###
 - [x] MSSQL
@@ -24,15 +27,8 @@ This simple retail solution project is using Entity Framework Core (EFC), Depend
 - [ ] Unit
 
 ### API Overview ###
-*This service has the following API:
+*This service has swagger support.
 
-|API|Description|Request body|Response body|
-|-|:-|:-|:-|
-| &#x1f499; **GET**<br> /api/Orders | Get all order items | - | Array of order items |
-| &#x1f499; **GET**<br> /api/Orders/{registrationNumber} | Get an order item by registration number | - | Order item |
-| &#x1F49A; **POST**<br> /api/Orders | Add a new order item | orderNumber & orderRegistrationNumber  | Order item |
-| &#x1f49b; **PATCH**<br> /api/Orders/{registrationNumber}  | Update an existing order item | orderRegistrationNumber | Order item |
-| &#x1f494; **DELETE** (TODO)<br> /api/Orders/{registrationNumber}  | Delete an existing order item | orderRegistrationNumber | - |
 
 * Plural Nouns for Endpoints
 * CamelCase for Attribute Names
